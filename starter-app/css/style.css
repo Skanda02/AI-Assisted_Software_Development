@@ -39,16 +39,16 @@ h2 { margin-top: 0; }
 .section { margin-top: 2rem; }
 .hero { padding: 3rem 0; border-bottom: 1px solid var(--border); }
 
-.button, button { display: inline-block; padding: .65rem 1rem; border: 1px solid var(--border-dark); background: var(--surface); color: var(--text); border-radius: .25rem; font: inherit; text-decoration: none; cursor: pointer; }
-.button:hover, button:hover { border-color: var(--text); }
+.button, button { display: inline-block; padding: .65rem 1rem; border: 1px solid var(--primary); background: var(--primary); color: var(--on-primary); border-radius: .25rem; font: inherit; text-decoration: none; cursor: pointer; }
+.button:hover, button:hover { background: var(--primary-hover); border-color: var(--primary-hover); color: var(--on-primary); }
 
 .card-grid, .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
 .card, .stat, .panel { background: var(--surface); border: 1px solid var(--border); border-radius: .25rem; padding: 1rem; }
 .card h3 { margin-top: 0; }
-.card a { color: inherit; }
+.card a { color: var(--primary); }
 .category { color: var(--muted); font-size: .875rem; margin: 0; text-transform: uppercase; letter-spacing: .04em; }
 .details { margin: 1rem 0; }
-.details div { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid #eeeeee; padding: .25rem 0; }
+.details div { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--divider); padding: .25rem 0; }
 .details dt, .details dd { margin: 0; }
 .details dt { color: var(--muted); }
 
@@ -57,17 +57,17 @@ h2 { margin-top: 0; }
 
 .form-row { display: grid; gap: .35rem; margin-bottom: 1rem; }
 input, select, button { width: 100%; font: inherit; }
-input, select { padding: .6rem; background: #ffffff; border: 1px solid var(--border); border-radius: .25rem; }
+input, select { padding: .6rem; background: var(--surface); border: 1px solid var(--border); color: var(--text); border-radius: .25rem; }
 button { margin-top: .25rem; }
 
 .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--border); }
 table { width: 100%; border-collapse: collapse; min-width: 36rem; }
 th, td { text-align: left; padding: .75rem; border-bottom: 1px solid var(--border); }
-thead { background: #eeeeee; }
+thead { background: var(--table-head); }
 tbody tr:last-child td { border-bottom: 0; }
 .empty-state { color: var(--muted); text-align: center; padding: 2rem; }
 
-:focus-visible { outline: 3px solid #000000; outline-offset: 2px; }
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
 
 @media (max-width: 640px) {
   .nav { align-items: flex-start; flex-direction: column; padding: .75rem 0; }
