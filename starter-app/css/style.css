@@ -8,7 +8,7 @@
   --primary-hover: #1d4ed8;
   --on-primary: #ffffff;
   --border: #d8e1f2;
-  --border-dark: #b9c7e3;
+  --border-dark: #7589ad;
   --table-head: #eaf1fd;
   --divider: #e6edf9;
 }
@@ -57,7 +57,7 @@ h2 { margin-top: 0; }
 
 .form-row { display: grid; gap: .35rem; margin-bottom: 1rem; }
 input, select, button { width: 100%; font: inherit; }
-input, select { padding: .6rem; background: var(--surface); border: 1px solid var(--border); color: var(--text); border-radius: .25rem; }
+input, select { padding: .6rem; background: var(--surface); border: 1px solid var(--border-dark); color: var(--text); border-radius: .25rem; }
 button { margin-top: .25rem; }
 
 .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--border); }
