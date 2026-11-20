@@ -9,35 +9,36 @@
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="index.html">CampusConnect</a>
+      <a class="brand" href="index.html"><span class="brand-mark">C</span>CampusConnect</a>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="events.html">Events</a>
+        <a href="student-hub.html">Student Hub</a>
         <a href="admin.html" aria-current="page">Admin</a>
       </div>
+      <a class="nav-cta" href="events.html">View public events <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main class="container">
-    <h1>Admin dashboard</h1>
-    <p class="lead">A static view of the information an administrator would manage.</p>
+    <section class="admin-hero"><div><p class="eyebrow"><span class="eyebrow-dot"></span> CampusConnect · Organiser space</p><h1>Good things happen<br />when we <span>bring people together.</span></h1><p class="lead">Your event overview, all in one place. A calm corner to keep campus life moving.</p></div><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Colleagues planning an event together" /></section>
 
     <section class="section" aria-labelledby="stats-heading">
-      <h2 id="stats-heading">Overview</h2>
+      <div class="section-heading"><div><p class="eyebrow">At a glance</p><h2 id="stats-heading">Your campus, in numbers</h2></div><span class="status-pill"><span></span> All systems looking good</span></div>
       <div class="stat-grid">
-        <div class="stat"><span class="stat-value">5</span><span>Total events</span></div>
-        <div class="stat"><span class="stat-value">0</span><span>Total registrations</span></div>
-        <div class="stat"><span class="stat-value">0</span><span>Events with registrations</span></div>
+        <div class="stat"><span class="stat-label">Total events <span>↗</span></span><span class="stat-value">5</span><span class="stat-foot">On the campus calendar</span></div>
+        <div class="stat"><span class="stat-label">Total registrations <span>↗</span></span><span class="stat-value">0</span><span class="stat-foot">Ready for your first guest</span></div>
+        <div class="stat"><span class="stat-label">Events with registrations <span>↗</span></span><span class="stat-value">0</span><span class="stat-foot">Let's get the word out</span></div>
       </div>
     </section>
 
     <section class="section" aria-labelledby="events-heading">
-      <h2 id="events-heading">Available events</h2>
+      <div class="section-heading"><div><p class="eyebrow">The lineup</p><h2 id="events-heading">Available events</h2></div><a class="text-link" href="events.html">Browse event page ↗</a></div>
       <div class="table-wrap"><table><thead><tr><th>Event</th><th>Participants</th></tr></thead><tbody><tr><td>AI and Machine Learning Workshop</td><td>0</td></tr><tr><td>Web Development Bootcamp</td><td>0</td></tr><tr><td>Coding Competition</td><td>0</td></tr><tr><td>Project Exhibition</td><td>0</td></tr><tr><td>Technical Quiz Competition</td><td>0</td></tr></tbody></table></div>
     </section>
 
     <section class="section panel" aria-labelledby="add-event-heading">
-      <h2 id="add-event-heading">Add new event</h2>
+      <p class="eyebrow">Have something in mind?</p><h2 id="add-event-heading">Add a new event</h2>
       <p>This form is a layout placeholder. Saving and deleting events is part of the student activity.</p>
       <form action="#add-event-heading" method="get">
         <div class="form-row"><label for="event-name">Event name</label><input id="event-name" name="name" placeholder="Enter event name" /></div>
@@ -48,9 +49,10 @@
     </section>
 
     <section class="section" aria-labelledby="participants-heading">
-      <h2 id="participants-heading">Registered participants</h2>
+      <div class="section-heading"><div><p class="eyebrow">The people who make it happen</p><h2 id="participants-heading">Registered participants</h2></div></div>
       <div class="table-wrap"><table><thead><tr><th>Student Name</th><th>USN</th><th>Email</th><th>Department</th></tr></thead><tbody><tr><td colspan="4" class="empty-state">No participants registered yet.</td></tr></tbody></table></div>
     </section>
   </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark">C</span>CampusConnect</a><p>A little more connected, every day.</p><span>Made for campus life.</span></footer>
 </body>
 </html>
