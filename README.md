@@ -16,6 +16,9 @@ The workshop is divided into 3 sessions, each 1.5 hours long:
 
 - `sessions/` contains the Session 1 and Session 2 student notes.
 - `starter-app/` contains the static CampusConnect baseline for Session 3.
+- `ai-assistant/` contains an optional local Streamlit + FastAPI application
+  using Ollama for campus-event chat and PDF assistance. See its
+  [setup guide](ai-assistant/README.md).
 - The Session 3 starter has no dependencies — open it directly in a browser or see [`starter-app/README.md`](starter-app/README.md).
 
 ## Learning Outcomes

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Track your grades, calculate SGPA, prepare for placements, practice aptitude, and explore VTU AIML question resources." />
+  <title>Student Hub | CampusConnect</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/student-hub.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">C</span>CampusConnect</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="student-hub.html" aria-current="page">Student Hub</a>
+        <a href="admin.html">Admin</a>
+      </div>
+      <a class="nav-cta" href="#daily-practice">Practice today <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main class="container student-hub">
+    <section class="hub-hero">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Your goals, your pace</p>
+        <h1>A little progress<br />adds up to <span>big things.</span></h1>
+        <p class="lead">Keep your grades in view, get placement-ready, and build a daily aptitude habit—one small step at a time.</p>
+        <a class="button button-primary" href="#sgpa-tracker">Start with your grades <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hub-hero-card" aria-label="Your student toolkit">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="hub-orb">✦</span>
+        <span class="hub-orb-label">Your student toolkit</span>
+        <span class="hub-orb-caption">Learn · Track · Grow</span>
+      </div>
+    </section>
+
+    <div id="hub-status" class="hub-status" role="status" aria-live="polite" hidden></div>
+
+    <section id="sgpa-tracker" class="hub-section" aria-labelledby="sgpa-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 · Academic progress</p><h2 id="sgpa-heading">SGPA calculator &amp; grade book</h2></div>
+        <span class="section-count">Saved on this device</span>
+      </div>
+      <div class="hub-grid hub-grid-grades">
+        <section class="hub-panel" aria-labelledby="calculator-heading">
+          <div class="hub-panel-heading"><div><p class="eyebrow">Semester calculator</p><h3 id="calculator-heading">Add your course grades</h3></div><span class="hub-panel-icon" aria-hidden="true">∑</span></div>
+          <form id="sgpa-form">
+            <div class="form-row">
+              <label for="semester">Semester</label>
+              <select id="semester" name="semester" required>
+                <option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3">Semester 3</option><option value="4">Semester 4</option>
+                <option value="5">Semester 5</option><option value="6">Semester 6</option><option value="7">Semester 7</option><option value="8">Semester 8</option>
+              </select>
+            </div>
+            <div class="course-row course-row-head" aria-hidden="true"><span>Course</span><span>Credits</span><span>Grade</span><span></span></div>
+            <div id="course-rows" class="course-rows"></div>
+            <div class="course-actions">
+              <button id="add-course" class="button button-outline" type="button">+ Add course</button>
+              <button class="button button-primary" type="submit">Save semester</button>
+            </div>
+            <p class="grade-scale-note">10-point scale used: O 10 · A+ 9 · A 8 · B+ 7 · B 6 · C 5 · P 4 · F 0. Check your institution's official scale.</p>
+          </form>
+        </section>
+
+        <aside class="hub-panel sgpa-result-panel" aria-labelledby="estimate-heading">
+          <p class="eyebrow">Live estimate</p>
+          <h3 id="estimate-heading">Your weighted SGPA</h3>
+          <output id="sgpa-result" class="sgpa-result" aria-live="polite">—</output>
+          <p id="sgpa-detail" class="sgpa-detail">Add course credits and grades to see your calculation.</p>
+          <div class="formula-card"><span>Grade points × credits</span><b>÷</b><span>Total course credits</span></div>
+          <p class="privacy-note">Your academic records stay in this browser on this device.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="grade-book-heading">
+      <div class="section-heading"><div><p class="eyebrow">Your academic story</p><h2 id="grade-book-heading">Grade book &amp; progress</h2></div></div>
+      <div id="grade-book" class="hub-panel grade-book" aria-live="polite"></div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="placement-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">02 · Career readiness</p><h2 id="placement-heading">Get placement-ready</h2></div>
+        <span id="placement-progress-label" class="section-count">0 of 5 steps</span>
+      </div>
+      <div class="hub-grid placement-grid">
+        <section class="hub-panel placement-paths" aria-labelledby="paths-heading">
+          <div class="hub-panel-heading"><div><p class="eyebrow">Explore a direction</p><h3 id="paths-heading">Popular preparation paths</h3></div><span class="hub-panel-icon" aria-hidden="true">↗</span></div>
+          <article class="path-card"><span class="path-number">01</span><div><h4>Software engineering</h4><p>Practice data structures, algorithms, OOP, DBMS, and explaining your projects.</p><div class="skill-chips"><span>DSA</span><span>OOP</span><span>Projects</span></div></div></article>
+          <article class="path-card"><span class="path-number">02</span><div><h4>Data &amp; analytics</h4><p>Build confidence in SQL, spreadsheets, statistics, visualization, and clear insights.</p><div class="skill-chips"><span>SQL</span><span>Statistics</span><span>Projects</span></div></div></article>
+          <article class="path-card"><span class="path-number">03</span><div><h4>Core &amp; electronics</h4><p>Revise fundamentals, solve role-specific problems, and document practical work.</p><div class="skill-chips"><span>Fundamentals</span><span>Problem solving</span><span>Portfolio</span></div></div></article>
+          <p class="placement-disclaimer">These are preparation ideas, not live vacancies or company eligibility rules. Check your college placement cell for current openings and criteria.</p>
+        </section>
+
+        <section class="hub-panel checklist-panel" aria-labelledby="checklist-heading">
+          <p class="eyebrow">Small steps count</p><h3 id="checklist-heading">My preparation checklist</h3>
+          <p class="checklist-intro">Tick off what you’ve worked on. Your progress is saved here.</p>
+          <div class="progress-track" role="progressbar" aria-label="Placement preparation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="placement-progress-bar"></span></div>
+          <label class="check-item"><input type="checkbox" data-placement-task="resume" /><span><b>Polish my resume</b><small>Keep it clear, current, and easy to scan.</small></span></label>
+          <label class="check-item"><input type="checkbox" data-placement-task="projects" /><span><b>Prepare my projects</b><small>Be ready to explain what you built and why.</small></span></label>
+          <label class="check-item"><input type="checkbox" data-placement-task="fundamentals" /><span><b>Revise core subjects</b><small>Review the fundamentals for my chosen role.</small></span></label>
+          <label class="check-item"><input type="checkbox" data-placement-task="interview" /><span><b>Practice an interview</b><small>Try a mock interview with a friend or mentor.</small></span></label>
+          <label class="check-item"><input type="checkbox" data-placement-task="research" /><span><b>Check official opportunities</b><small>Ask the placement cell about current openings.</small></span></label>
+        </section>
+      </div>
+    </section>
+
+    <section id="daily-practice" class="hub-section daily-section" aria-labelledby="daily-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">03 · Daily practice</p><h2 id="daily-heading">Three questions. A sharper you.</h2><p class="daily-subtitle">A fresh mix of aptitude practice every day. Take your time—learning matters more than speed.</p></div>
+        <div class="daily-date"><span aria-hidden="true">◷</span><span id="daily-date-label">Today's practice</span></div>
+      </div>
+      <div id="daily-questions" class="daily-questions" aria-live="polite"></div>
+      <div class="daily-footer"><p id="daily-completion" class="daily-completion">Answer all three to complete today's practice.</p><span class="daily-source">Practice runs locally. No account or paid service needed.</span></div>
+    </section>
+
+    <section id="vtu-aiml-practice" class="hub-section vtu-section" aria-labelledby="vtu-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">04 · VTU AIML resources</p>
+          <h2 id="vtu-heading">Papers &amp; practice for AIML</h2>
+          <p class="daily-subtitle">Find official VTU material by semester, then revise with original questions based on the published syllabus.</p>
+        </div>
+      </div>
+      <div class="hub-panel vtu-resource-panel">
+        <div class="form-row vtu-semester-select">
+          <label for="vtu-semester">2025 scheme · Semester</label>
+          <select id="vtu-semester" name="vtu-semester">
+            <option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3">Semester 3</option><option value="4">Semester 4</option>
+            <option value="5">Semester 5</option><option value="6">Semester 6</option><option value="7">Semester 7</option><option value="8">Semester 8</option>
+          </select>
+        </div>
+        <div id="vtu-resource-status" class="vtu-resource-status" role="status" aria-live="polite"></div>
+        <article id="vtu-course-card" class="vtu-course-card" hidden></article>
+        <section id="vtu-question-panel" class="vtu-question-panel" aria-labelledby="vtu-questions-heading" hidden>
+          <div class="vtu-question-heading">
+            <div><p class="eyebrow">Original study set</p><h3 id="vtu-questions-heading">22 syllabus-based practice questions</h3></div>
+            <label for="vtu-module-filter">Filter by module
+              <select id="vtu-module-filter">
+                <option value="all">All modules</option>
+                <option value="1">Module 1 · AI foundations</option>
+                <option value="2">Module 2 · Prompt engineering</option>
+                <option value="3">Module 3 · Machine learning</option>
+                <option value="4">Module 4 · AI trends</option>
+                <option value="5">Module 5 · Applications</option>
+              </select>
+            </label>
+          </div>
+          <p class="vtu-practice-note">These are newly written practice prompts—not copied VTU exam questions or historical PYQs. Open each answer note after trying the question.</p>
+          <div id="vtu-question-list" class="vtu-question-list"></div>
+        </section>
+        <p class="vtu-source-links">
+          Official sources:
+          <a href="https://vtu.ac.in/model-question-paper-b-e-b-tech-b-arch/" target="_blank" rel="noopener noreferrer">VTU model question paper index</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://vtu.ac.in/b-e-scheme-syllabus/" target="_blank" rel="noopener noreferrer">VTU scheme and syllabus index</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark">C</span>CampusConnect</a><p>A little more connected, every day.</p><span>Made for campus life.</span></footer>
+</body>
+</html>

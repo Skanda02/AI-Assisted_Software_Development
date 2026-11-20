@@ -1,0 +1,7 @@
+fastapi
+httpx
+ollama
+pypdf
+python-multipart
+streamlit
+uvicorn
